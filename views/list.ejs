@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+</head>
+<body>
+    <h1>관리자, 유저 리스트 페이지</h1>
+    <table>
+        <tr>
+            <th>아이디</th>
+            <th>비밀번호</th>
+            <th>회사코드</th>
+            <th>유저타입</th>
+            <th>쓰기권한</th>
+            <th>읽기권한</th>
+            <th>마지막 로그인</th>
+            <th>휴면계정</th>
+        </tr>
+
+        <% 
+            for(let i=0;i<(data.admin.length);i++) {%>
+                <tr>
+                    <td><%=data.admin[i]['id']%></td>
+                    <td><%=data.admin[i]['pw']%></td>
+                    <td><%=data.admin[i]['comcode']%></td>
+                    <td><%=data.admin[i]['usertype']%></td>
+                    <td><%=data.admin[i]['writeid']%></td>
+                    <td><%=data.admin[i]['readid']%></td>
+                    <td><%=data.admin[i]['lastlogin']%></td>
+                    <td><%=data.admin[i]['sleep']%></td>
+                </tr> 
+            <%}
+        %>
+        <!------------------------------------------------------>
+        <% 
+            for(let i=0;i<(data.user.length);i++) {%>
+                <tr>
+                    <td><%=data.user[i]['id']%></td>
+                    <td><%=data.user[i]['pw']%></td>
+                    <td><%=data.user[i]['comcode']%></td>
+                    <td><%=data.user[i]['usertype']%></td>
+                    <td><%=data.user[i]['writeid']%></td>
+                    <td><%=data.user[i]['readid']%></td>
+                    <td><%=data.user[i]['lastlogin']%></td>
+                    <td><%=data.user[i]['sleep']%></td>
+                </tr>
+            <%}
+        %>
+    </table>
+</body>
+</html>

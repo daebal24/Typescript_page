@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Longin</title>
+    
+    <style>
+        html, div, form {
+            display: table;
+            margin: auto;
+        }
+        #btn_login{
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">
+    <script>
+
+        const message= "<%- result %>";
+        if(message!="")
+        {
+            alert(message);
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <h1>로그인 페이지</h1>
+    <form action="/" method="post">
+        <!-- 
+            not found error : 타입자체가 undefined
+            <input type="text" id="result" value="<%= (typeof(result) !== 'undefined' ? result : '') %>" hidden>
+        -->        
+        <input type="text" placeholder="Id" name="user_id" ><br>
+        <input type="password" placeholder="Password" name="user_pw" ><br>
+        <br>
+        <input type="submit" value="로그인" id="btn_login">
+        
+    </form>
+</body>
+</html>

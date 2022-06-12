@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <style>
+        html, div {
+            display: table;
+            margin: auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onload=function()
+        {
+            document.getElementById('btn_list').onclick=function()
+            {
+                let option = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
+                let popup_list = window.open('/list', 'form', option);
+            };
+            
+            document.getElementById('btn_register').onclick=function()
+            {
+                let option = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
+                let popup_list = window.open('/register', 'form', option);
+            };
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>메인 페이지</h1>
+    <div>
+        <input type="button" value="등록" id="btn_register">
+        <input type="button" value="목록" id="btn_list">
+    </div>
+
+    <input type="text" value="" hidden="true">
+
+</body>
+</html>

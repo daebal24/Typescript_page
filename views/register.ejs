@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        let sw = "<%=close%>";
+        if(sw=="true")
+        {
+            alert("등록완료");
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form action="/register" method="post" id="form_register">
+            ID :<input name="id" /><br />
+            Password : <input name="pw" /><br />
+            <select name="comcode">
+                <option value="7">70,000</option>
+                <option value="8">80,000</option>
+                <option value="9">90,000</option>
+            </select> 
+            <fieldset name="usertype" >
+                <legend>Usertype</legend>
+                Admin <input type="radio" name="user" value="admin" />
+                User <input type="radio" name="user" value="user" />
+            </fieldset>
+            <fieldset id="permission" name="permission">
+                <legend>Permission</legend>
+                Write <input type="checkbox" name="perm_write" id="writeid"/> 
+                Read <input type="checkbox" name="perm_read" id="readid"/>
+            </fieldset>
+            <br />
+            <button id="submit" onclick="submit()">작성 완료</button>
+        </form>
+    </div>
+
+</body>
+</html>
