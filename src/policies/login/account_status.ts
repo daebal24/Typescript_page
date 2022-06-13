@@ -7,7 +7,7 @@ logincontext 입력받고 휴면인지 아닌지 체크
 
 import { ILoginPolicyResult, Policy } from "../Policy";
 import { LoginContext } from "../../context/login_context";
-import { Load_Data } from "../../scripts/load_Data";
+import { Load_Data } from "../../util/load_Data";
 
 export class Accountstatus extends Policy
 {

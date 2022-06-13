@@ -2,7 +2,6 @@ export class Load_Data
 {
     loadjson(input:string)
     {
-        //'../data/data.json'
         let src:string = "";
 
         if(input == "people")
@@ -14,28 +13,11 @@ export class Load_Data
         let d:string = fs.readFileSync(src, 'utf8') ;
         let js:Object = {}; js = JSON.parse(d);
         let jdata = JSON.stringify(js);
-        const data = JSON.parse(jdata); // const d!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        const data = JSON.parse(jdata);
         
         return data;
 
     }
-
-
-    user_currentDataList(id:string, pw:string, comcode:string, usertype:string, writeid:boolean, readid:boolean, lastlogin:string, sleep:boolean)
-    {
-        let eachman = {
-            "id" : id,
-            "pw" : pw,
-            "comcode" : comcode,
-            "usertype" : usertype,
-            "writeid" : writeid,                     
-            "readid" : readid,
-            "lastlogin" : lastlogin,
-            "sleep" : sleep
-        };
-        return eachman;
-    }
-
     people_data_loading(newlogintime:string, usertype:string, index:number)
     {
         
@@ -102,5 +84,20 @@ export class Load_Data
         returnarray.push(admin, user);
         return returnarray;
 
+    }
+
+    user_currentDataList(id:string, pw:string, comcode:string, usertype:string, writeid:boolean, readid:boolean, lastlogin:string, sleep:boolean)
+    {
+        let eachman = {
+            "id" : id,
+            "pw" : pw,
+            "comcode" : comcode,
+            "usertype" : usertype,
+            "writeid" : writeid,                     
+            "readid" : readid,
+            "lastlogin" : lastlogin,
+            "sleep" : sleep
+        };
+        return eachman;
     }
 }

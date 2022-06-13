@@ -1,6 +1,6 @@
 import { fstat, readFile } from "fs";
 import { BooleanLiteral, isIdentifier, updateStatement } from "typescript";
-import { Load_Data } from "../scripts/load_Data";
+import { Load_Data } from "../util/load_Data";
 
 export class LoginContext 
 {

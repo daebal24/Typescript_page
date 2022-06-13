@@ -1,6 +1,6 @@
 
 import express from 'express'; 
-import { Load_Data } from '../../scripts/load_Data';
+import { Load_Data } from '../../util/load_Data';
 
 
 const router = express.Router()

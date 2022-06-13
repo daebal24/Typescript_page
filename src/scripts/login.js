@@ -1,0 +1,4 @@
+if(message!="")
+{
+    alert(message);
+}

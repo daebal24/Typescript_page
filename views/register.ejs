@@ -3,39 +3,44 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        html, div, body {
+            display: table;
+            margin: auto;
+            background-color:aliceblue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous">
     <script>
         let sw = "<%=close%>";
-        if(sw=="true")
-        {
-            alert("등록완료");
-            window.close();
-        }
     </script>
+    <script src="/scripts/register.js"></script>
 </head>
 <body>
     <div>
+        <br />
         <form action="/register" method="post" id="form_register">
-            ID :<input name="id" /><br />
-            Password : <input name="pw" /><br />
-            <select name="comcode">
+            ID : <input name="id" /><br /><br />
+            Password : <input name="pw" /><br /><br />
+            회사코드 : <select name="comcode">
                 <option value="7">70,000</option>
                 <option value="8">80,000</option>
                 <option value="9">90,000</option>
-            </select> 
+            </select><br /><br />
             <fieldset name="usertype" >
-                <legend>Usertype</legend>
+                <legend>Usertype</legend>--
                 Admin <input type="radio" name="user" value="admin" />
                 User <input type="radio" name="user" value="user" />
-            </fieldset>
+            </fieldset><br />
             <fieldset id="permission" name="permission">
-                <legend>Permission</legend>
+                <legend>Permission</legend>--
                 Write <input type="checkbox" name="perm_write" id="writeid"/> 
                 Read <input type="checkbox" name="perm_read" id="readid"/>
-            </fieldset>
+            </fieldset><br />
             <br />
             <button id="submit" onclick="submit()">작성 완료</button>
         </form>
     </div>
-
 </body>
 </html>

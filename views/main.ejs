@@ -3,40 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Main</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous">
     <style>
-        html, div {
+        html, body, div{
             display: table;
             margin: auto;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        window.onload=function()
-        {
-            document.getElementById('btn_list').onclick=function()
-            {
-                let option = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
-                let popup_list = window.open('/list', 'form', option);
-            };
-            
-            document.getElementById('btn_register').onclick=function()
-            {
-                let option = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
-                let popup_list = window.open('/register', 'form', option);
-            };
-        }
-
-    </script>
 </head>
-
 <body>
+    <br/><br/>
     <h1>메인 페이지</h1>
-    <div>
-        <input type="button" value="등록" id="btn_register">
-        <input type="button" value="목록" id="btn_list">
+    <div class="card text-white bg-primary mb-3">
+        <button type="button" value="회원 등록" id="btn_register" class="btn btn-secondary">회원 등록</button>
+        <button type="button" value="회원 목록" id="btn_list" class="btn btn-secondary">회원 목록</button>
     </div>
-
-    <input type="text" value="" hidden="true">
-
 </body>
 </html>
