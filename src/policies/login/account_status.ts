@@ -18,7 +18,7 @@ export class Accountstatus extends Policy
         let message: string="";
 
         //휴면 전환기준 : 30
-        let sleep_standard = 30;
+        let sleep_standard:number = 30;
         let lastlogin:string = context.lastlogin;
 
         let today:string = (new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())).toString();
@@ -27,9 +27,10 @@ export class Accountstatus extends Policy
         {
             status = 400;
             message = "휴면계정입니다";
-        }        
+        }   
         else
         {
+            console.log("pass!");
             status = 200;
             message = "";
 

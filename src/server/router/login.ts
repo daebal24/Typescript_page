@@ -56,7 +56,9 @@ router.post('/', async(req, res) => {
     {
         console.log("로그인 결과 : 성공");
         const data="";
-        res.render('main',{data:data});
+        let write:boolean=logincontext.writeid;
+        let read:boolean=logincontext.readid;
+        res.render('main',{write, read});
     }
     else
     {

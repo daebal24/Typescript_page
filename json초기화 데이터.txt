@@ -1,0 +1,11 @@
+{
+    "admin":
+    [
+        {"id":"admin","pw":"1234","comcode":"90000","usertype":"admin","writeid":true,"readid":true,"lastlogin":"Mon Jun 13 2022 00:00:00 GMT+0900 (대한민국 표준시)","sleep":false},
+        {"id":"admin2","pw":"1234","comcode":"80000","usertype":"admin","writeid":true,"readid":true,"lastlogin":"Sun Jun 05 2021 00:00:00 GMT+0900 (한국 표준시)","sleep":true}],
+    "user":
+    [
+        {"id":"user1","pw":"1234","comcode":"80000","usertype":"user","writeid":false,"readid":false,"lastlogin":"Mon Jun 13 2022 00:00:00 GMT+0900 (대한민국 표준시)","sleep":false},
+        {"id":"user2","pw":"1234","comcode":"70000","usertype":"user","writeid":true,"readid":false,"lastlogin":"Sun Jun 05 2022 00:00:00 GMT+0900 (한국 표준시)","sleep":false}
+    ]
+}

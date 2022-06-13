@@ -66,6 +66,7 @@ class Register
         let writeid:boolean=write;
         let readid:boolean=read;
         let usertype:string="admin";
+        let comcode:string=newcomcode+"0000";
 
         if(!request_isAdmin)
         {
@@ -76,7 +77,7 @@ class Register
         {
             "id" : newid,
             "pw" : newpw,
-            "comcode" : newcomcode,
+            "comcode" : comcode,
             "usertype" : usertype,
             "writeid" : writeid,                     
             "readid" : readid,
